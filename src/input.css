@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* ถ้าอยากตั้งค่า Design Tokens (แทนไฟล์ config เดิม) เราจะทำตรงนี้เลยครับ */
+@import "tailwindcss";
+/* บรรทัดนี้คือการบอก Tailwind ว่า "ถ้าเจอ class='dark' ให้เปิดโหมดมืดนะ!" */
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* 1. สี Brand ใหม่ (Teal) */
+    --color-brand: #14b8a6;
+    --color-brand-hover: #0d9488; /* สีตอน Hover (เข้มขึ้นนิดนึงเพื่อให้ดูมีมิติ) */
+    --color-surface: #f8fafc;
+
+    /* 2. ฟอนต์ Noto Sans Thai */
+    /* ทริค: เราตั้งชื่อตัวแปรเป็น --font-sans เพื่อให้มันกลายเป็นฟอนต์เริ่มต้นของทั้งเว็บเลยครับ */
+    --font-sans: "Noto Sans Thai", sans-serif;
+    --font-heading: "Noto Sans Thai", sans-serif;
+
+    /* 3. ความมนของขอบ (คงไว้เหมือนเดิม) */
+    --radius-card: 1.5rem;
+}
